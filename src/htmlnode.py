@@ -19,9 +19,12 @@ class HTMLNode:
 
     def props_to_html(self):
         if self.props is None:
-            return None
+            return ""
 
-        string = f"href={self.props}"
+        string = ""
+        for x in self.props:
+            string += f' {x}="{self.props[x]}"'
+
         return string
 
     def __eq__(self, other):  # members : tag, value, children, props
