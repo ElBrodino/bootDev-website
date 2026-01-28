@@ -1,5 +1,8 @@
+from typing_extensions import NoDefault
+
 from htmlnode import HTMLNode
 from leafNode import LeafNode
+from parentNode import ParentNode
 from textnode import TextNode, TextType
 
 
@@ -24,6 +27,16 @@ def main():
     print(test2)
     print(test2.to_html())
     print(f"props_to_html : {test2.props_to_html()}")
+    test3 = ParentNode(
+        "p",
+        [
+            LeafNode("b", "Bold text"),
+            LeafNode(None, "Normal text"),
+            LeafNode("i", "italic text"),
+            LeafNode(None, "Normal text"),
+        ],
+    )
+    print(test3.to_html())
 
 
 main()
