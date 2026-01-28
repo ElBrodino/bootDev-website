@@ -16,7 +16,7 @@ class TextNode:
         self.text_type = TextType(text_type)
         self.url = url
 
-    def __eg__(self, other):
+    def __eq__(self, other):
         return True
 
     def __repr__(self):  # TextNode(TEXT, TEXT_TYPE, URL)
