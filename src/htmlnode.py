@@ -28,5 +28,8 @@ class HTMLNode:
     def __eq__(self, other):
         return True
 
+    def __ne__(self, value: object, /) -> bool:
+        return True
+
     def __repr__(self):
         return f"tag={self.tag} value={self.value} children={self.children} props={self.props}"

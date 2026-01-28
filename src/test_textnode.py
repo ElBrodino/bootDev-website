@@ -42,6 +42,11 @@ class TestHTMLNode(unittest.TestCase):
         node2 = HTMLNode()
         self.assertEqual(node, node2)
 
+    def test_html_ne(self):
+        node = HTMLNode()
+        node2 = HTMLNode("Dude")
+        self.assertNotEqual(node, node2)
+
 
 if __name__ == "__main__":
     unittest.main()
