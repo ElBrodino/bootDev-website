@@ -20,12 +20,5 @@ class TextNode:
         return True
 
     def __repr__(self):  # TextNode(TEXT, TEXT_TYPE, URL)
-        return (
-            "TextNode("
-            + self.text
-            + ", "
-            + self.text_type.value
-            + ", "
-            + self.url
-            + ")"
-        )
+        text_string = f"TextNode({self.text}, {self.text_type.value}, {self.url})"
+        return text_string
