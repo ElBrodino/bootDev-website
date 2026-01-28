@@ -7,7 +7,6 @@ class HTMLNode:
         # (e.g. the text inside a paragraph)
         self.value = value
         # A list of HTMLNode objects representing the children of
-        # this node
         self.children = children
         # A dictionary of key-value pairs representing
         # the attributes of the HTML tag.
@@ -25,11 +24,25 @@ class HTMLNode:
         string = f"href={self.props}"
         return string
 
-    def __eq__(self, other):
-        return True
+    def __eq__(self, other):  # members : tag, value, children, props
+        if (
+            self.tag == other.tag
+            and self.value == other.value
+            and self.children == other.children
+            and self.props == other.props
+        ):
+            return True
+        return False
 
-    def __ne__(self, value: object, /) -> bool:
-        return True
+    def __ne__(self, other):
+        if (
+            self.tag != other.tag
+            or self.value != other.value
+            or self.children != other.children
+            or self.props != other.props
+        ):
+            return True
+        return False
 
     def __repr__(self):
         return f"HTMLNode({self.tag}, {self.value}, {self.children}, {self.props})"
