@@ -31,7 +31,7 @@ class TestTextNode(unittest.TestCase):
 
     def test_notEq_Type(self):
         node = TextNode("This is a text node", TextType.BOLD)
-        node2 = TextNode("This is a text node", TextType.PLAIN)
+        node2 = TextNode("This is a text node", TextType.TEXT)
         self.assertNotEqual(node, node2)
 
 

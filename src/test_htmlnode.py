@@ -35,7 +35,7 @@ class TestHTMLNode(unittest.TestCase):
         node = HTMLNode(
             children=[TextNode("dude", TextType.BOLD), TextNode("dude2", TextType.BOLD)]
         )
-        node2 = HTMLNode(children=[TextNode("dude", TextType.PLAIN)])
+        node2 = HTMLNode(children=[TextNode("dude", TextType.TEXT)])
         self.assertNotEqual(node, node2)
         self.assertFalse(node == node2)
 
